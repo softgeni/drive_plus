@@ -49,12 +49,23 @@ export default async function ReservesPage() {
             },
             {
               header: "Status",
-              render: (o) => (
-                <div className="p-2 bg-green-600 text-white text-center rounded">
-                  {o.status}
-                </div>
-              ),
+              render: (o) => {
+                let bgColor = "#F59E0B"; // default Pending (amarillo)
+
+                if (o.status === "Approved") bgColor = "#16A34A"; // verde
+                else if (o.status === "Rejected") bgColor = "#DC2626"; // rojo
+
+                return (
+                  <div
+                    style={{ backgroundColor: bgColor }}
+                    className="p-2 text-white text-center rounded"
+                  >
+                    {o.status}
+                  </div>
+                );
+              },
             },
+
             {
               header: "Amount",
               render: (o) => `${formatPrice(Number(o.totalAmount))}`,

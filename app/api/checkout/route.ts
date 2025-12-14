@@ -72,7 +72,8 @@ export async function POST(
       carId,
       carName: carName,
       userId: userId,
-      status: "Approve",
+      status: "Pending",
+
       totalAmount: totalAmount.toString(),
       orderDate: startDate,
       orderEndDate: endDate,
