@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { TEXTS } from "@/constants";
 import { useLoveCars } from "@/hooks";
 
 import { useAuth, UserButton } from "@clerk/nextjs";
@@ -25,11 +26,11 @@ export const Navbar = () => {
               width={50}
               height={50}
             />
-            <span className=" text-xl font-bold">Drive Plus</span>
+            <span className=" text-xl font-bold">{TEXTS.menu.drivePlus}</span>
           </Link>
           <div className=" flex items-center justify-center gap-x-7">
-            <Link href={"/cars"}>List Cars</Link>
-            <Link href={"/dashboard"}>Dashboard</Link>
+            <Link href={"/cars"}>{TEXTS.menu.listCars}</Link>
+            <Link href={"/dashboard"}>{TEXTS.menu.dashboard}</Link>
             {userId ? (
               <>
                 <Link href={"/love-cars"}>
@@ -45,7 +46,7 @@ export const Navbar = () => {
             ) : (
               <Link href={"/sign-in"} className=" flex gap-x-3">
                 <Button>
-                  Iniciar sesion
+                  {TEXTS.menu.login}
                   <User className=" ml-2 h-4 w-4" />
                 </Button>
               </Link>

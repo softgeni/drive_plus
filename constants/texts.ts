@@ -10,7 +10,7 @@ export const TEXTS = {
 
   menu: {
     drivePlus: "Drive Plus Space",
-    listCars: "List Cars",
+    listCars: "All Cars",
     dashboard: "Dashboard",
     login: "Sign In",
     register: "Register",
@@ -28,34 +28,6 @@ export const TEXTS = {
     unpublish: "Unpublish",
     clearFilters: "Clear Filters",
     showAll: "Show All Models",
-  },
-
-  car: {
-    type: "Vehicle Type",
-    sedan: "Sedan",
-    suv: "SUV",
-    coupe: "Coupe",
-    family: "Family",
-    deluxe: "Deluxe",
-  },
-
-  transmission: {
-    title: "Transmission",
-    automatic: "Automatic",
-    manual: "Manual",
-  },
-
-  engine: {
-    title: "Engine",
-    gasoil: "Gasoline",
-    diesel: "Diesel",
-    electric: "Electric",
-    hybrid: "Hybrid",
-  },
-
-  people: {
-    title: "Passengers",
-    options: ["2", "4", "5", "7"],
   },
 
   messages: {

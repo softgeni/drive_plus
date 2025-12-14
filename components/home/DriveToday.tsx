@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { Reveal } from "../shared";
+import { TEXTS } from "@/constants";
 
 export const DriveToday = () => {
   return (
@@ -9,13 +10,13 @@ export const DriveToday = () => {
       <div className="bg-[url('/images/background-2.jpg')] bg-center bg-no-repeat bg-cover rounded-xl p-6 lg:p-32 relative ">
         <div className=" lg:flex gap-x-6">
           <div>
-            <h3 className="text-4xl text-white">Drive your card Today</h3>
+            <h3 className="text-4xl text-white">{TEXTS.texts.driveToday}</h3>
             <p className=" text-white text-xl my-5">
-              Register and Explore the world of premiun cars
+              {TEXTS.texts.registerExplore}
             </p>
             <Link href={"/sign-in"}>
               <Button variant={"outline"} size={"lg"}>
-                Register here
+                {TEXTS.menu.register}
               </Button>
             </Link>{" "}
           </div>

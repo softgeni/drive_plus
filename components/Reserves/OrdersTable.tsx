@@ -1,3 +1,4 @@
+import { TEXTS } from "@/constants";
 import { formatPrice } from "../../lib/formatPrice";
 import {
   TableBody,
@@ -32,7 +33,9 @@ export const OrdersTable = ({ results, columns }: any) => {
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={columns.length - 1}>Total</TableCell>
+          <TableCell colSpan={columns.length - 1}>
+            {TEXTS.pricing.totalPrice}
+          </TableCell>
           <TableCell className="text-right">
             {formatPrice(Number(totalGlobal))}
           </TableCell>

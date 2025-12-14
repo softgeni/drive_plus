@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { onDeleteCar, onPublishedCars } from "@/handlers";
 import type { CarsItemProps } from "@/types";
 import { ButtonEditCar } from "../../cars-manager";
+import { TEXTS } from "@/constants";
 
 export function CarActions({ car }: CarsItemProps) {
   const router = useRouter();
@@ -25,7 +26,7 @@ export function CarActions({ car }: CarsItemProps) {
     <div className="p-3">
       <div className="flex justify-between mt-3 gap-x-4">
         <Button variant="outline" onClick={deletedCar}>
-          Delete
+          {TEXTS.actions.delete}
           <Trash className="h-4 w-4 ml-2" />
         </Button>
 
@@ -38,12 +39,12 @@ export function CarActions({ car }: CarsItemProps) {
           className="w-full mt-3"
           onClick={publishedCar}
         >
-          Unpublish
+          {TEXTS.actions.publish}
           <Upload className="h-4 w-4 ml-2" />
         </Button>
       ) : (
         <Button className="w-full mt-3" onClick={publishedCar}>
-          Publish
+          {TEXTS.actions.unpublish}
           <Upload className="h-4 w-4 ml-2" />
         </Button>
       )}

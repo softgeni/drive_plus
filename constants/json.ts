@@ -1,13 +1,14 @@
 import { Calendar, Car, Heart } from "lucide-react";
+import { TEXTS } from "./texts";
 
 const WIDTH = 80;
 const HEIGHT = 80;
-const ALT = "Logo Drive Plus";
+const ALT = TEXTS.menu.drivePlus;
 const LOGO = "/logo.svg";
-const TITLE = "Drive plus";
+const TITLE = TEXTS.menu.drivePlus;
 const TITLE2 = "GENERAL";
 const TITLE_ADMID = "ADMIN";
-const TITLE_LIST_CARDS = "List of cars";
+const TITLE_LIST_CARDS = TEXTS.menu.listCars;
 const FOOTER_COPY = " 2025. All rights reserved Softgenix.LLC";
 
 // 🔹 Variables para la primera ruta

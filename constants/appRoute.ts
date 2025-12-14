@@ -1,15 +1,16 @@
 import { Calendar, SquareGanttChart } from "lucide-react";
 import { ROUTES } from "./json";
+import { TEXTS } from "./texts";
 
 export const dataAdminSidebar = [
   {
     icon: SquareGanttChart,
-    label: "Manage your cars",
+    label: TEXTS.home.manageCars,
     href: "/dashboard/admin/cars-manager",
   },
   {
     icon: Calendar,
-    label: "All reserves",
+    label: TEXTS.home.allReservations,
     href: "/dashboard/admin/reserves-admin",
   },
 ];

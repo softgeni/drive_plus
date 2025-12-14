@@ -20,6 +20,7 @@ import type { ModalAddReservationProps } from "@/types";
 import { CalendarSelector } from "./CalendarSelector";
 import { onReserveCar } from "@/handlers";
 import { Button } from "@/components/ui/button";
+import { TEXTS } from "@/constants";
 
 export const ModalAddReservation = ({ car }: ModalAddReservationProps) => {
   const [dateSelected, setDateSelected] = useState<{
@@ -40,7 +41,7 @@ export const ModalAddReservation = ({ car }: ModalAddReservationProps) => {
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>
-            Selecciona las fechas para reservar este Vehiculo
+            {TEXTS.descriptions.modelDescription}
           </AlertDialogTitle>
           <AlertDialogDescription>
             <CalendarSelector

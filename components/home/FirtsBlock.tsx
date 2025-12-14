@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "../shared";
+import { TEXTS } from "@/constants";
 
 export const FirtsBlock = () => {
   return (
@@ -9,13 +10,11 @@ export const FirtsBlock = () => {
     >
       <div className=" p-6 lg:pl-40">
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold">
-          Premiun
-          <span className="block">Rental Cars</span>
-          in the world
+          {TEXTS.texts.premium}
+          <span className="block">{TEXTS.texts.rentalCars}</span>
         </h1>
         <p className="text-lg mt-2 lg:mt-5 lg:text-xl max-w-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-          placeat ipsum!
+          {TEXTS.descriptions.premiumDescription}
         </p>
       </div>
       <Reveal className=" flex justify-end" position="right">

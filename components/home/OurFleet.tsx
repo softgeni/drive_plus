@@ -6,6 +6,7 @@ import {
   categoryOurFleet,
   dataFirstBlockOurFleet,
   dataSecondBlockOurFleet,
+  TEXTS,
 } from "@/constants";
 import { Button } from "../ui/button";
 import { MoveRight } from "lucide-react";
@@ -14,11 +15,10 @@ import { cn } from "@/lib/utils";
 export const OurFleet = () => {
   return (
     <div className=" max-w-6xl mx-auto text-center py-12 lg:py-40">
-      <h3 className=" text-2xl lg:text-6xl font-bold">Our Vehicle Feet</h3>
-      <p className="text-lg mt-2 lg:mt-5 lg:text-xl text-center w-full mx-auto max-w-2xl mb-5 lg:m-10">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
-        soluta recusandae quae quos? Vero, adipisci ex!
-      </p>
+      <h3 className=" text-2xl lg:text-6xl font-bold">
+        {TEXTS.descriptions.vehicleFeature}
+      </h3>
+      <p className="text-lg mt-2 lg:mt-5 lg:text-xl text-center w-full mx-auto max-w-2xl mb-5 lg:m-10"></p>
       <div className=" grid grid-cols-2 lg:grid-cols-6 gap-4  items-center justify-center mb-5 max-w-2xl mx-auto">
         {categoryOurFleet.map(({ name, active }) => (
           <div
