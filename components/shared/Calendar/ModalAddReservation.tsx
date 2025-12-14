@@ -25,7 +25,7 @@ export const ModalAddReservation = ({ car }: ModalAddReservationProps) => {
   const [dateSelected, setDateSelected] = useState<{
     from: Date | undefined;
     to: Date | undefined;
-  }>({ from: new Date(), to: addDays(new Date(), 5) });
+  }>({ from: new Date(), to: addDays(new Date(), 3) });
 
   const onReservation = async () => {
     await onReserveCar(car, dateSelected);
