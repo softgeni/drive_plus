@@ -2,12 +2,10 @@ interface HeaderCarsProps {
   title: string;
 }
 
-export const HeaderCars = () => {
+export const HeaderCars = ({ title }: HeaderCarsProps) => {
   return (
     <div className=" my-8">
-      <h1 className=" text-3xl font-bold">
-        Elige el vehiculo que quieres conducir
-      </h1>
+      <h1 className=" text-3xl font-bold">{title}</h1>
     </div>
   );
 };

@@ -4,12 +4,11 @@ import { getCarsPublische } from "@/services";
 
 export default async function CarsPage() {
   const cars = await getCarsPublische();
-  console.log(cars);
   return (
     <>
       <Navbar />
       <div className="p-6 mx-auto max-w-7xl">
-        <HeaderCars />
+        <HeaderCars title={"Elige el vehiculo que quieres conducir"} />
         <div className="">
           <FilterAndListCars cars={cars.car} />
         </div>
