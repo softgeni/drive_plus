@@ -18,7 +18,6 @@ export default function useReserveDate(
       from: date?.from,
       to: date?.to,
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [date]);
 
   const calculateDaysBetween = (from: Date, to: Date): number => {
