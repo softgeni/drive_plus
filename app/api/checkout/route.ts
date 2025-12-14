@@ -57,6 +57,7 @@ export async function POST(
       quantity: 1,
       price_data: {
         currency: "USD",
+
         product_data: {
           name: carName,
         },
@@ -90,13 +91,6 @@ export async function POST(
       card: {
         request_three_d_secure: "any",
       },
-      sepa_debit: {},
-      us_bank_account: {
-        financial_connections: {
-          permissions: ["payment_method"],
-        },
-        verification_method: "automatic",
-      },
     },
     success_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/order-confirmation`,
     cancel_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/order-error`,
@@ -107,6 +101,7 @@ export async function POST(
       endDate,
       numberOfDays,
       userId,
+      order_description: `Alquiler de ${carName} por ${numberOfDays} días`,
     },
   };
 
