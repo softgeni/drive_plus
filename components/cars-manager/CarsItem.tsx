@@ -3,11 +3,14 @@
 import Image from "next/image";
 import type { CarsItemProps } from "@/types";
 
-import { CarActions, CarInfo } from "../shared";
+import { CarActions, CarInfo, Reveal } from "../shared";
 
 export const CarsItem = ({ car }: CarsItemProps) => {
   return (
-    <div className="relative p-1 bg-white rounded-lg shadow-md hover:shadow-lg">
+    <Reveal
+      position="bottom"
+      className="relative p-1 bg-white rounded-lg shadow-md hover:shadow-lg"
+    >
       <Image
         src={car.photo || ""}
         alt={car.name}
@@ -28,6 +31,6 @@ export const CarsItem = ({ car }: CarsItemProps) => {
 
       <CarInfo car={car} />
       <CarActions car={car} />
-    </div>
+    </Reveal>
   );
 };

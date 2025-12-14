@@ -79,7 +79,7 @@ export async function POST(
   });
   // crear sesion de pago
   const sessionParams: Stripe.Checkout.SessionCreateParams = {
-    payment_method_types: ["card", "sepa_debit", "us_bank_account"],
+    payment_method_types: ["card"],
     mode: "payment",
     line_items,
     billing_address_collection: "required",

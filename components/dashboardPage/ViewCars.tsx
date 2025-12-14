@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Fuel, Gauge, Gem, Heart, User, Wrench } from "lucide-react";
 
 import type { ListCarsProps } from "@/types";
-import { ModalAddReservation } from "../shared";
+import { ModalAddReservation, Reveal } from "../shared";
 import { useLoveCars } from "@/hooks";
 import { useAuth } from "@clerk/nextjs";
 import Link from "next/link";
@@ -19,7 +19,10 @@ export const ViewCars = ({ cars }: ListCarsProps) => {
         <p>No se ha encontrado vehiculos con estos filtros</p>
       )}
 
-      <div className=" grid md:grid-cols-2  gap-6 lg:grid-cols-4">
+      <Reveal
+        position="right"
+        className=" grid md:grid-cols-2  gap-6 lg:grid-cols-4"
+      >
         {cars.map((car) => {
           const {
             priceDay,
@@ -96,7 +99,7 @@ export const ViewCars = ({ cars }: ListCarsProps) => {
             </div>
           );
         })}
-      </div>
+      </Reveal>
     </>
   );
 };
