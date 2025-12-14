@@ -1,0 +1,33 @@
+import {
+  HandCoins,
+  Hourglass,
+  MessageCircleQuestion,
+  ShieldCheck,
+} from "lucide-react";
+
+export const dataFeature = [
+  {
+    icon: Hourglass,
+    text: "24 hour car delivery",
+    bg: "bg-slate-100",
+    delay: 1,
+  },
+  {
+    icon: MessageCircleQuestion,
+    text: "24/7 tecnical support",
+    bg: "bg-indigo-100",
+    delay: 1.2,
+  },
+  {
+    icon: ShieldCheck,
+    text: "Premiun secure",
+    bg: "bg-indigo-100",
+    delay: 1.3,
+  },
+  {
+    icon: HandCoins,
+    text: "With the best price",
+    bg: "bg-indigo-100",
+    delay: 1.5,
+  },
+];
