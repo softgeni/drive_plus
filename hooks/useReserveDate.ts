@@ -10,7 +10,7 @@ export default function useReserveDate(
 ) {
   const [date, setDate] = useState<DateRange | undefined>({
     from: new Date(),
-    to: addDays(new Date(), 5),
+    to: addDays(new Date(), 2),
   });
 
   useEffect(() => {
