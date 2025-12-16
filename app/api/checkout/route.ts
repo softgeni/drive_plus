@@ -89,9 +89,9 @@ export async function POST(
       enabled: true,
     },
     payment_method_options: {
-      card: {
-        request_three_d_secure: "any",
-      },
+      // card: {
+      //request_three_d_secure: "any",
+      //},
     },
     success_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/order-confirmation`,
     cancel_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/order-error`,
