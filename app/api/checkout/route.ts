@@ -81,17 +81,18 @@ export async function POST(
   });
   // crear sesion de pago
   const sessionParams: Stripe.Checkout.SessionCreateParams = {
-    payment_method_types: ["card"],
+    payment_method_types: ["card", "crypto"],
     mode: "payment",
+
     line_items,
     billing_address_collection: "required",
     phone_number_collection: {
       enabled: true,
     },
     payment_method_options: {
-      // card: {
-      //request_three_d_secure: "any",
-      //},
+      card: {
+        request_three_d_secure: "any",
+      },
     },
     success_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/order-confirmation`,
     cancel_url: `${process.env.NEXT_PUBLIC_FRONTEND_STORE_URL}/order-error`,
